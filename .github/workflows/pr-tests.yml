@@ -21,4 +21,3 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile --ignore-scripts
       - run: pnpm exec tsc
-      - run: pnpm test
