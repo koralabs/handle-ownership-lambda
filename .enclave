@@ -1,0 +1,7 @@
+# Files whose change the operator must review. Exact repo-root paths only. Why each: CANONICAL_CONTRACT.md.
+src/main.ts
+src/utils/datum.ts
+src/utils/handles.ts
+src/configs/index.ts
+.enclave
+CANONICAL_CONTRACT.md
