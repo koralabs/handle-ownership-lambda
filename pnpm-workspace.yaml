@@ -1,0 +1,2 @@
+minimumReleaseAgeExclude:
+  - '@koralabs/kora-labs-common@6.21.6'
