@@ -6,6 +6,7 @@ import {
   IPersonalizedHandle,
   IReferenceToken,
   ScriptDetails,
+  ScriptType,
 } from '@koralabs/kora-labs-common';
 import fetch from 'cross-fetch';
 import { Err, Ok, Result } from 'ts-res';
@@ -99,10 +100,16 @@ export const fetchPZScriptDetails = async (): Promise<
   Result<ScriptDetails[], string>
 > => {
   try {
-    const scriptDetail = await fetchApi(`/scripts?type=pz_contract`).then(
+    // `/scripts` is keyed by script address and `type` is a prefix match (`pers` also matches
+    // persprx/perspz/...), so keep only the personalization contract itself.
+    const scriptDetail = await fetchApi(`/scripts?type=${ScriptType.PZ_CONTRACT}`).then(
       (res) => res.json() as unknown as ScriptDetailsResponse
     );
-    return Ok(Object.values(scriptDetail));
+    return Ok(
+      Object.values(scriptDetail).filter(
+        (script) => script.type === ScriptType.PZ_CONTRACT
+      )
+    );
   } catch (err) {
     return Err(convertError(err));
   }
