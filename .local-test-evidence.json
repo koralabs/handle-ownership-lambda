@@ -1,6 +1,6 @@
 {
-  "commit": "ca316683608f08e88200946973372a8aa8ad7f5d",
+  "commit": "1848ac4d490f81f1d16bd2298f9ae64596dcf539",
   "result": "pass",
-  "command": "npm test",
-  "at": "2026-11-02T06:39:55Z"
+  "command": "scripts/local-tests.sh",
+  "at": "2026-11-02T07:01:27Z"
 }
