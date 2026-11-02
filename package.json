@@ -18,7 +18,7 @@
   "dependencies": {
     "@blockfrost/blockfrost-js": "^5.7.0",
     "@helios-lang/uplc": "^0.7.10",
-    "@koralabs/kora-labs-common": "^5.1.26",
+    "@koralabs/kora-labs-common": "^6.21.6",
     "axios": "^1.7.9",
     "blockstore-core": "^5.0.2",
     "cross-fetch": "^4.0.0",

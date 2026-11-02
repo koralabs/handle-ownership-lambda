@@ -15,8 +15,8 @@ importers:
         specifier: ^0.7.10
         version: 0.7.10
       '@koralabs/kora-labs-common':
-        specifier: ^5.1.26
-        version: 5.1.26(buffer@6.0.3)
+        specifier: ^6.21.6
+        version: 6.21.6(buffer@6.0.3)
       axios:
         specifier: ^1.7.9
         version: 1.21.0
@@ -328,8 +328,34 @@ packages:
     resolution: {integrity: sha512-AokJm4tuBHillT+FpMtxQ60n8ObyXBatq7jD2/JA9dxbDDokKQm8KMht5ibGzLVU9IJDIKK4TPKgMHEYMn3lMg==}
     engines: {node: '>=18'}
 
-  '@koralabs/kora-labs-common@5.1.26':
-    resolution: {integrity: sha512-plrrY5lWJab7acwNUh6Nb1GpN0q2IkZbrV1vCut9FLHTwOJjNwA9H8Rtj+t5dBSoZuVnI5WTrsyu4hBNZFLrWw==}
+  '@koralabs/kora-labs-common@6.21.6':
+    resolution: {integrity: sha512-gIOIUPbF1ftRy9H2+TWJlRIV4MPQDfLdk8uOyCsj30pwyPEtiNPkqDeZNqhxyi3oi7E5DtXEmTNAoaZo/E5RxQ==}
+    peerDependencies:
+      '@aiken-lang/merkle-patricia-forestry': ^1.2.0
+      '@cardano-sdk/core': ^0.46.12 || ^0.47.0
+      '@cardano-sdk/crypto': ^0.4.5
+      '@emurgo/cardano-message-signing-nodejs': ^1.1.0
+      '@playwright/test': ^1.50.0
+      bip39: ^3.0.4
+      cassandra-driver: ^4.9.0
+      scalus: ^0.15.0 || ^1.0.0
+    peerDependenciesMeta:
+      '@aiken-lang/merkle-patricia-forestry':
+        optional: true
+      '@cardano-sdk/core':
+        optional: true
+      '@cardano-sdk/crypto':
+        optional: true
+      '@emurgo/cardano-message-signing-nodejs':
+        optional: true
+      '@playwright/test':
+        optional: true
+      bip39:
+        optional: true
+      cassandra-driver:
+        optional: true
+      scalus:
+        optional: true
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
@@ -688,6 +714,7 @@ packages:
   eslint@9.19.0:
     resolution: {integrity: sha512-ug92j0LepKlbbEv6hD911THhoRHmbdXt2gX+VDABAW/Ir7D3nqKdv5Pf5vtlyY6HQMTEP2skXY43ueqTCWssEA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -944,6 +971,9 @@ packages:
     resolution: {integrity: sha512-ykkVRwrYvFm1nb2AJfKKYPr0emF6IiXDYUaFx4Zn9ZuIH7MrzEZ3sD5RlqGXNRpHtvUHJyOnCEFxOlNDtGo7wg==}
     engines: {node: 20 || >=22}
 
+  js-md5@0.8.3:
+    resolution: {integrity: sha512-qR0HB5uP6wCuRMrWPTrkMaev7MJZwJuuw4fnwAzRgP4J4/F8RwtodOKpGp4XpqsLBFzzgqIO42efFAyz2Et6KQ==}
+
   js-yaml@4.3.2:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
@@ -969,6 +999,12 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
+
+  libsodium-sumo@0.8.4:
+    resolution: {integrity: sha512-TMtHShQfVVsaxDygyapvUC3o7YsPgXa/hRWeIgzyFz6w5k/1hirGptCxp1U7XwW3rCskaTTYKgV10v86UiGgNw==}
+
+  libsodium-wrappers-sumo@0.8.4:
+    resolution: {integrity: sha512-ql7hcgulKZ3ekfa2DGAogcCKsWU0diA/0nArz1CFzh93WQdb46/Kj18ka/Hifq6uA3Ush34Pc6vU/6HXeRwUkg==}
 
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
@@ -1513,7 +1549,7 @@ snapshots:
 
   '@isaacs/cliui@9.0.0': {}
 
-  '@koralabs/kora-labs-common@5.1.26(buffer@6.0.3)':
+  '@koralabs/kora-labs-common@6.21.6(buffer@6.0.3)':
     dependencies:
       bech32: 2.0.0
       blakejs: 1.2.1
@@ -1521,6 +1557,8 @@ snapshots:
       bs58: 6.0.0
       cbor: 9.0.2
       crc: 4.3.2(buffer@6.0.3)
+      js-md5: 0.8.3
+      libsodium-wrappers-sumo: 0.8.4
       pluralize-esm: 9.0.5
     transitivePeerDependencies:
       - buffer
@@ -2269,6 +2307,8 @@ snapshots:
     dependencies:
       '@isaacs/cliui': 9.0.0
 
+  js-md5@0.8.3: {}
+
   js-yaml@4.3.2:
     dependencies:
       argparse: 2.0.1
@@ -2293,6 +2333,12 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  libsodium-sumo@0.8.4: {}
+
+  libsodium-wrappers-sumo@0.8.4:
+    dependencies:
+      libsodium-sumo: 0.8.4
 
   locate-path@6.0.0:
     dependencies:
